@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #1e3a8a, #0f172a);
+    color: #fff;
+}
+
+.container {
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #2563eb;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #f1f5f9;
+}
+
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.primary { background: #2563eb; color: #fff; }
+.success { background: #16a34a; color: #fff; }
+.danger  { background: #dc2626; color: #fff; }
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+#alertBox {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+}

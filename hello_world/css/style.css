@@ -1,0 +1,35 @@
+.header {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.content {
+    color: white;
+    font-size: 50px;
+    background-color: black;
+}
+
+.content:hover {
+    color: aqua;
+    background-color: burlywood;
+}
+
+.border-red {
+   border: 5px khaki solid;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color:black;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: blueviolet;
+}

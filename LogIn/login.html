@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="card" role="main">
+            <div class="left">
+                <div class="brand">
+                    <div class="logo" aria-hidden="true"></div>
+                    <div>
+                        <h1>Welcome</h1>
+                        <p class="lead">Sign in to continue</p>
+                    </div>
+                </div>
+
+                <form id="loginForm" novalidate>
+                    <label for="username">Username</label>
+                    <input id="username" name="username" autocomplete="username" required />
+
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password" required />
+
+
+                    <button id="submitBtn" class="btn" type="submit">Sign in</button>
+
+                    <div id="message" class="message" aria-live="polite"></div>
+                </form>
+
+                <div class="footer">⊹₊˚‧︵‿⊹₊˚‧︵‿⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹‿︵‧˚₊⊹‿︵‧˚₊⊹</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+const form = document.getElementById('loginForm');
+const msg = document.getElementById('message');
+const btn = document.getElementById('submitBtn');
+
+// Test users
+const mockUsers = [
+    { username: 'admin', password: 'admin123' },
+    { username: 'test', password: 'test123' }
+];
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Signing...';
+    msg.textContent = '';
+
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value;
+
+    // Simple validation
+    if(!username || !password){
+        msg.style.color = 'crimson';
+        msg.textContent = 'Enter username and password';
+        btn.disabled = false;
+        btn.textContent = 'Sign in';
+        return;
+    }
+
+    // Check mock users
+    const user = mockUsers.find(u => u.username === username && u.password === password);
+
+    if(user){
+        msg.style.color = 'green';
+        msg.textContent = 'Login successful! Redirecting...';
+
+        // Redirect to dashboard after 1 second
+        setTimeout(() => {
+            window.location.href = 'dashboard.html';
+        }, 1000);
+    } else {
+        msg.style.color = 'crimson';
+        msg.textContent = 'Username or password is incorrect';
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Sign in';
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+:root {
+    --bg-main: #e8f5e9;
+    --card-bg: #c8e6c9;
+    --accent: #66bb6a;
+    --accent-dark: #2e7d32;
+    --text-main: #1b5e20;
+    --muted: #4e342e;
+    --input-bg: #f1f8e9;
+    --success: #4caf50;
+    --danger: #e53935;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+    background: linear-gradient(135deg, #dcedc8, #e8f5e9);
+    color: var(--text-main);
+}
+
+.wrap {
+    width: 100%;
+    max-width: 500px;
+    margin: 32px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent), #a5d6a7);
+}
+
+h1 {
+    font-size: 22px;
+    margin: 0 0 6px 0;
+    color: var(--accent-dark);
+}
+
+p.lead {
+    margin: 0;
+    color: var(--muted);
+}
+
+form {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--accent-dark);
+    background-color: var(--input-bg);
+    font-size: 14px;
+}
+
+.helper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 8px;
+    border: 0;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent-dark);
+}
+
+.message {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.footer {
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .card {
+        padding: 24px;
+    }
+}

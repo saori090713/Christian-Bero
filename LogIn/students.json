@@ -1,0 +1,4 @@
+[
+    { "id": 1, "student_id": "S001", "first_name": "Ana", "last_name": "", "email": "ana@example.com", "course": "Math", "year_level": "1" },
+    { "id": 2, "student_id": "S002", "first_name": "Ben", "last_name": "", "email": "ben@example.com", "course": "Science", "year_level": "2" }
+]

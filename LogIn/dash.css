@@ -1,0 +1,135 @@
+:root {
+    --bg-main: #e8f5e9;
+    --bg-card: #c8e6c9;
+    --bg-table: #f1f8e9;
+    --text-main: #1b5e20;
+    --accent: #66bb6a;
+    --accent-dark: #2e7d32;
+    --success: #4caf50;
+    --danger: #e53935;
+    --muted: #4e342e;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: var(--bg-card);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+}
+
+.btn.success { background-color: var(--success); }
+.btn.danger { background-color: var(--danger); }
+
+.table-container {
+    padding: 24px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-table);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #e6f2e6;
+}
+
+tr:hover {
+    background-color: #dcedc8;
+}
+
+.alert {
+    margin: 16px 32px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.alert.success { background-color: #a5d6a7; color: #1b5e20; }
+.alert.danger { background-color: #ef9a9a; color: #b71c1c; }
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-content h3 {
+    margin: 0 0 12px 0;
+    color: var(--accent-dark);
+}
+
+.modal-content input {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #c8e6c9;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+@media(max-width:768px){
+    .navbar { flex-direction: column; gap: 12px; }
+    .table-container { padding: 16px; }
+}

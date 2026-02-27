@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="dash.css">
+<script src="dashboard.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Student Dashboard 𓎢𓎠𓎟𓎠𓎡𓎢𓎠𓎟𓎠𓎡𓎢𓎠𓎟𓎠𓎡≽^•⩊•^≼𓎢𓎠𓎟𓎠𓎡𓎢𓎠𓎟𓎠𓎡𓎢𓎠𓎟𓎠𓎡</h1>
+        <button class="btn success" onclick="addModal.style.display='flex'">+ Add Student</button>
+    </header>
+
+    <!-- Alert Box -->
+    <div id="alertBox" class="alert" style="display:none;"></div>
+
+    <!-- Student Table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                    <th>Year Level</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
+        </table>
+    </div>
+
+    <!-- Add Student Modal -->
+    <div class="modal" id="addModal">
+        <div class="modal-content">
+            <h3>Add Student</h3>
+            <form id="addStudentForm">
+                <input name="student_id" placeholder="Student ID" required>
+                <input name="first_name" placeholder="First Name" required>
+                <input name="last_name" placeholder="Last Name" required>
+                <input name="email" placeholder="Email" required>
+                <input name="course" placeholder="Course">
+                <input name="year_level" placeholder="Year Level">
+                <div class="modal-actions">
+                    <button type="submit" class="success">Add</button>
+                    <button type="button" class="danger" onclick="addModal.style.display='none'">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Student Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h3>Edit Student</h3>
+            <form id="editStudentForm">
+                <input type="hidden" name="id">
+                <input name="student_id" placeholder="Student ID" required>
+                <input name="first_name" placeholder="First Name" required>
+                <input name="last_name" placeholder="Last Name" required>
+                <input name="email" placeholder="Email" required>
+                <input name="course" placeholder="Course">
+                <input name="year_level" placeholder="Year Level">
+                <div class="modal-actions">
+                    <button type="submit" class="success">Update</button>
+                    <button type="button" class="danger" onclick="editModal.style.display='none'">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
